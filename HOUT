@@ -1,0 +1,132 @@
+HOUT.TXT
+HUZEFA DOSSAJI        
+ECE 223 Fall 2015
+MP1
+TEST LOG
+
+
+
+Welcome to lab1. Using list size: 1
+INSERT x
+LIST x
+REMOVE x
+SCAN x
+PRINT
+QUIT
+# HUZEFA DOSSAJI
+# ECE 223, MP1, Fall 2015
+# HTEST.txt
+# 
+# Test script to show a few simple tests for the sequential list ADT.
+# 
+# TEST 1:  Go through a few scans removes and list without anything in the list to make sure it works#  with no data
+# 
+No records with >= 1 matches
+# 
+Did not remove: 4
+# 
+Did not find: 1
+# // The test did not find a record as predicted because nothing has been inserted so nothing could be removed or found
+# TEST 2:  Add three entries to list to make sure insert is working correctly
+# 
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+
+Added: 200
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+
+Added: 51 and doubled list size
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+
+Added: 120 and doubled list size
+# // Test 2 successfully inserted the entries and doubled list size when it was needed. since original list size was 1. there will be a few reallocations in the beginging
+# TEST 3: Print the list and verify three entries are sorted, also do list and scan threshold 1
+# 
+List has 3 records
+1: Dest IP: 51, Src: 50, Dest port: 215, Src: 101, Hop Count: 53 Prot: 263 Score: 5.76, Time: 263
+2: Dest IP: 120, Src: 10, Dest port: 150, Src: 804, Hop Count: 22 Prot: 153 Score: 1.58, Time: 36
+3: Dest IP: 200, Src: 43, Dest port: 53, Src: 23, Hop Count: 24 Prot: 11 Score: 1.1, Time: 167
+# 
+Dest IP: 51, Src: 50, Dest port: 215, Src: 101, Hop Count: 53 Prot: 263 Score: 5.76, Time: 263
+Found 1 packets matching 51
+# 
+Dest IP: 120, Src: 10, Dest port: 150, Src: 804, Hop Count: 22 Prot: 153 Score: 1.58, Time: 36
+Found 1 packets matching 120
+# 
+A set with address 51 has 1 packets
+A set with address 120 has 1 packets
+A set with address 200 has 1 packets
+Found 3 sets
+#  // Test 3 successfully printed the sorted list and printed packet 51 when asked for the list. it also found three sets for the correct threshold
+# TEST 4  Add a second 200 entry in the list so we can test threshold and print
+# 
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+
+Added: 200
+# //Test 4 succesffully added a 200 entry
+# TEST 5: Print the list, verify two entrys for 200, and four total entrieS. scan threshold 2 then re# move the 200s
+# 
+List has 4 records
+1: Dest IP: 51, Src: 50, Dest port: 215, Src: 101, Hop Count: 53 Prot: 263 Score: 5.76, Time: 263
+2: Dest IP: 120, Src: 10, Dest port: 150, Src: 804, Hop Count: 22 Prot: 153 Score: 1.58, Time: 36
+3: Dest IP: 200, Src: 43, Dest port: 53, Src: 23, Hop Count: 24 Prot: 11 Score: 1.1, Time: 167
+4: Dest IP: 200, Src: 1031, Dest port: 80, Src: 14, Hop Count: 25 Prot: 0 Score: 49.2, Time: 54
+# 
+A set with address 200 has 2 packets
+Found 1 sets
+# 
+Removed 2 packets matching 200
+# // Test 5 succesfully printed the list in order. it then found the address 200 with 2 packets and then removed them
+# TEST 6: print then Scan for 200 and see if it has been removed and then print details
+# 
+List has 2 records
+1: Dest IP: 51, Src: 50, Dest port: 215, Src: 101, Hop Count: 53 Prot: 263 Score: 5.76, Time: 263
+2: Dest IP: 120, Src: 10, Dest port: 150, Src: 804, Hop Count: 22 Prot: 153 Score: 1.58, Time: 36
+# 
+Did not find: 200
+# 
+List has 2 records
+1: Dest IP: 51, Src: 50, Dest port: 215, Src: 101, Hop Count: 53 Prot: 263 Score: 5.76, Time: 263
+2: Dest IP: 120, Src: 10, Dest port: 150, Src: 804, Hop Count: 22 Prot: 153 Score: 1.58, Time: 36
+# 
+# // Test 6 show that address 200's were removed and it could not find them anytmore with list. it then prints the updated list 
+# TEST 7: insert some more, remove the first, scan threshold 1 and then list the 42. then add two mor# e 42s and PRINT AND SCAN THRESHOLD 3
+# 
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+
+Added: 40
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+
+Added: 42
+# 
+Removed 1 packets matching 40
+# 
+A set with address 42 has 1 packets
+A set with address 51 has 1 packets
+A set with address 120 has 1 packets
+Found 3 sets
+# 
+Dest IP: 42, Src: 2, Dest port: 5, Src: 2, Hop Count: 67 Prot: 3 Score: 5, Time: 2
+Found 1 packets matching 42
+# 
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+
+Added: 42
+Source IP address:Destination port number:Source port number:Hop count:Protocol:Threat Score:Time:
+
+Added: 42 and doubled list size
+
+//Test 7 succesfully added more packets and found the address 42 as expected it also relocated when needed
+# TEST 8: print and scan for threshold 3 to make sure everything at the end is working after a few re# allocations
+List has 5 records
+1: Dest IP: 42, Src: 2, Dest port: 5, Src: 2, Hop Count: 67 Prot: 3 Score: 5, Time: 2
+2: Dest IP: 42, Src: 3, Dest port: 5, Src: 2, Hop Count: 5 Prot: 2 Score: 5, Time: 5
+3: Dest IP: 42, Src: 5, Dest port: 3, Src: 6, Hop Count: 2 Prot: 5 Score: 6, Time: 6
+4: Dest IP: 51, Src: 50, Dest port: 215, Src: 101, Hop Count: 53 Prot: 263 Score: 5.76, Time: 263
+5: Dest IP: 120, Src: 10, Dest port: 150, Src: 804, Hop Count: 22 Prot: 153 Score: 1.58, Time: 36
+A set with address 42 has 3 packets
+Found 1 sets
+# 
+# // Test 8 succesffuly found address 42 with 3 packets as it says in the list. scan worked for threshold 3
+# TEST 9: Quit
+# // Test 9 is quit and succesfully freed all memory and exited the program.
+cleanup

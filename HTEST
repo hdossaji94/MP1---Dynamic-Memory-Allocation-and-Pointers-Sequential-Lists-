@@ -1,0 +1,130 @@
+HUZEFA DOSSAJI
+ECE 223, MP1, Fall 2015
+HTEST.txt
+TEST SCRIPT
+
+Test script to show a few simple tests for the sequential list ADT.
+
+TEST 1:  Go through a few scans removes and list without anything in the list to make sure it works with no data
+
+SCAN 1
+
+REMOVE 4
+
+LIST 1
+
+TEST 2:  Add three entries to list to make sure insert is working correctly
+
+INSERT 200	
+43
+53
+23
+24
+11
+1.1
+167
+INSERT 51 
+50
+215
+101
+53
+263
+5.76
+263
+INSERT 120 
+10
+150
+804
+22
+153
+1.58
+36
+
+TEST 3: Print the list and verify three entries are sorted, also do list and scan threshold 1
+
+PRINT
+
+LIST 51
+
+LIST 120
+
+SCAN 1
+
+TEST 4  Add a second 200 entry in the list so we can test threshold and print
+
+INSERT 200
+1031
+80
+14
+25
+0
+49.2
+54
+
+TEST 5: Print the list, verify two entrys for 200, and four total entrieS. scan threshold 2 then remove the 200s
+
+PRINT
+
+SCAN 2
+
+REMOVE 200
+
+TEST 6: print then Scan for 200 and see if it has been removed and then print details
+
+PRINT
+
+LIST 200
+
+PRINT
+
+
+TEST 7: insert some more, remove the first, scan threshold 1 and then list the 42. then add two more 42s and PRINT AND SCAN THRESHOLD 3
+
+INSERT 40
+20
+4
+5
+3
+5
+3
+3
+INSERT 42
+2
+5
+2
+67
+3
+5
+2
+
+REMOVE 40
+
+SCAN 1
+
+LIST 42
+
+INSERT 42
+3
+5
+2
+5
+2
+5
+5
+INSERT 42
+5
+3
+6
+2
+5
+6
+6
+TEST 8: print and scan for threshold 3 to make sure everything at the end is working after a few reallocations
+PRINT
+SCAN 3
+
+
+TEST 9: Quit
+
+QUIT
+
