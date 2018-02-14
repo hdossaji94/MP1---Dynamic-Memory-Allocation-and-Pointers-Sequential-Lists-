@@ -1,6 +1,10 @@
 # MP1---Dynamic-Memory-Allocation-and-Pointers-Sequential-Lists-
 
 
-PLEASE VIEW mp1.pdf FOR FULL INSTRUCTIONS AND EXPLANATIONS!
+[PLEASE VIEW mp1.pdf FOR FULL INSTRUCTIONS AND EXPLANATIONS!](mp1.pdf)
 
 The goal of this machine problem is to familiarize you with the basics of maintaining information with dynamic memory allocation and pointers. This assignment provides a simple example of data abstraction for organizing information in a sorted list. We will develop a simple abstraction with a few key interfaces and a simple underlying implementation using sequential arrays. In a subsequent programming assignment we will expand upon the interfaces and explore alternative implementations. We will refer to this abstract data type (ADT) as a sequential list.
+
+A Honeypot is one strategy used by computer network administrators to monitor and isolate unauthorized use of information systems. One specific mechanism is to locate the honeypot on the router at an ingress connection to the organization’s network. The honeypot examines incoming packets and monitors those packets with destination network addresses that are assigned to the organization but are not currently being utilized. Packets that are destined for unutilized addresses may indicate an attacker is scanning all addresses looking for vulnerabilities.
+
+For this project, we model one portion of the honeypot. Assume another process examines incoming packets and directs those packets that might be associated with an attack to our module. Our project collects key data from the packets and stores the data in a sorted order. When directed, your program scans the list and determines if there are a significant number of packets addressed to the same destination address, and if so prints the records. This is a first indication that there may be an attack and that other parts of the system (which we will not implement) can evaluate these packets for further testing. For this project we will write the ADT for storing the packet information, and a function to evaluate the information for a sign of an attack.
